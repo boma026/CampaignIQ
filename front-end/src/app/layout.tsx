@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/ui/appSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,21 +24,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-      <header className="fixed top-0 left-0 w-full z-50 bg-primary text-primary-foreground shadow-md py-4 px-6 flex items-center">
-      <div className="flex items-center gap-3">
-        {/*<img src="/logo.svg" alt="Logo" className="h-8 w-8" />*/}
-        <span className="text-xl font-bold">CampaignIQ</span>
-      </div>
-    </header>
-      <main className="pt-20">
-        {children}
-      </main>
-      </body>
-    </html>
+  return (  
+      <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <header className="sticky top-0 w-full z-50 bg-primary text-primary-foreground shadow-md py-4 px-6 flex items-center">
+            <div className="flex items-center gap-3">
+              {/*<img src="/logo.svg" alt="Logo" className="h-8 w-8" />*/}
+              <span className="text-xl font-bold">CampaignIQ</span>
+            </div>
+        </header>
+          {children}
+        </body>
+  
+      </html>
   );
 }
