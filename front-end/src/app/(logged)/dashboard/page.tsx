@@ -1,4 +1,4 @@
-export default function DashboardLayout () {
+export default function DashboardPage () {
     return (
         <div>
             <h1>testeskmdlçkasmdklçamdlkamdlasmdaslkmdamdlamldmalmdlkasmdlkasmdlkam</h1>
