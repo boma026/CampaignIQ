@@ -27,12 +27,19 @@ export default function RootLayout({
   return (  
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <header className="sticky top-0 w-full z-50 bg-primary text-primary-foreground shadow-md py-4 px-6 flex items-center">
-            <div className="flex items-center gap-3">
-              {/*<img src="/logo.svg" alt="Logo" className="h-8 w-8" />*/}
-              <span className="text-xl font-bold">CampaignIQ</span>
+           <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+            <div className="max-w-[1200px] mx-auto px-6 py-4 flex items-center gap-4">
+              {/* logo/name */}
+              <div className="flex items-center gap-3">
+                <div className="h-9 w-9 bg-primary rounded-md flex items-center justify-center text-white font-semibold">CQ</div>
+                <span className="text-lg font-semibold">CampaignIQ</span>
+              </div>
+              {/* spacer */}
+              <div className="flex-1" />
+              {/* small helper text */}
+              <div className="text-sm text-slate-600">Conta: Empresa Exemplo</div>
             </div>
-        </header>
+      </header>
           {children}
         </body>
   
