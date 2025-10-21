@@ -29,7 +29,10 @@ export default function Home() {
             <Input id="password" type="password" placeholder="Digite sua senha" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           <div>
-            
+            <Label htmlFor="password" className="my-2">Senha</Label>
+            <Input id="password" type="password" placeholder="Digite sua senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+          <div>
           </div>
           <Button className="w-full">Entrar</Button>
         </CardContent>
